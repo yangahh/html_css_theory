@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/*      .box{
+            background-color: green;
+            color: white;
+            transition: all background-color .5s ease-in-out; 배경 색을 0.5초안에 바꾸고 애니메이션은 exse-in-out 스르륵 나타나고 스르륵 사라지는 효과
+        } background-color .5s ease-in-out 세개 동시에 가능하게 하려면 앞에 all을 붙여주면 됨
+        .box:hover{
+            background-color: red;
+            color: blue;
+        } */
+        .box{
+            background-color: green;
+            color: white;
+            transition: all background-color 1s ease-in-out; 
+        }
+        .box:active{
+            background-color: red;
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <span class="box">text</span>
+</body>
+</html>

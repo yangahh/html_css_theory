@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <style>
+        body, html{
+            height: 100%;
+        }
+        .father{
+            background-color: seashell;
+            display: flex;
+            
+            /* justify-content 속성은 플렉스 요소의 수평(좌우) 방향 정렬 방식을 설정 */
+            /* justify-content: center;  */
+            justify-content: space-between; /*같은 간격으로 조정*/
+            /* justify-content: space-around; 컨텐츠 뿐만 아니라 그 주변도 같은 간격으로 조정됨 */
+            
+            /* align-items: center; align-items 속성은 모든 직속 자식의 align-self를 지정. 수직(상하)으로 적용됨*/
+            align-items: center; /*center, flex-start, flex-end 등등*/
+            
+            /*flex-direction: 플랙스박스 모양 설정. default는 row로 수평모양(가로로 쌓임)*/  
+            /* flex-direction: column; 박스가 수직으로 바뀜. 즉, (컬럼 안에) 박스가 수평이 아닌 수직으로 쌓임. 이렇게 설정시 justify-content는 수직 방향 정렬, align-items는 수평 방향 정렬으로 바뀜  */
+            flex-direction: row; /*자식 박스의 내용이 순서가 뒤바뀜*/
+            
+            flex-wrap: wrap-reverse; /*화면 창 보다 박스(child)가 넘어가면 박스 폭을 유지하고 밑줄로 박스가 나열됨. default는 nowrap으로, 화면 창보다 나열된 박스가 많아지면 박스 폭이 줄어듦*/
+        }
+        .box{
+            background-color: rebeccapurple;
+            height: 200px;
+            width: 200px;
+            /* display: inline-block; 명시하지 않아도 부모 박스가 display: flex;로 설정되어 있으면 자동으로 inline-block으로 설정됨 */ 
+            /* margin-right: 7.3px; */
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color:white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+</body>
+</html>

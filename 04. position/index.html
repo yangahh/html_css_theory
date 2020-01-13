@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+        
+        body, html{    /* 이걸 설정하는 이유는 브라우저가 가지고 있는 default값을 상쇄하기위해 */
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body{ 
+            height: 400%;
+            background-color: lavenderblush;
+        }
+        /* Position - fixed
+        #boxOne{
+            height: 200px;
+            width: 300px;
+            background-color: lightcoral;
+            position: static; 
+        }
+        #boxTwo{
+            height: 200px;
+            width: 300px;
+            background-color:lightsteelblue;
+            position: fixed; 
+            top: 500px;
+            bottom: 500px;
+            right: 20px;
+        }
+        */
+        .abs-box{
+            height: 400px;
+            width: 400px;
+            background-color: lightcoral;
+            position: relative;
+        }
+        .abs-child{
+            height: 100px;
+            width: 100px;
+            background-color:lightsteelblue;
+            position: absolute; 
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--Position - fixed
+    <div id="boxOne" class="box">
+        <div class="box-child"></div>
+    </div>
+    <div id="boxTwo" class="box">
+        <div class="box-child"></div> 
+    </div>-->
+    <div class="abs-box">
+        <div class="abs-child"></div>
+    </div>
+</body>
+</html>

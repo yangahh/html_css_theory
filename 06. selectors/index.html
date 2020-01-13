@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectors and Pseudo Selectors</title>
+    <style>
+/*     input[type="submit"]{
+        background-color: yellowgreen;
+    }
+    input[required="required"]{
+        background-color: powderblue;
+    }
+    input{
+        border: 1px solid black;
+    } */
+    .container > .box{ /*box는 container의 직계*/
+        background-color: cornflowerblue;
+    }
+    .box{
+        background-color: gray;
+        display: block;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .child{  /*child는 box의 직계*/
+        width: 40px;
+        border: 1px solid black;
+    }
+    /* .box:last-child{
+        background-color: palevioletred;
+    } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box child"></div> <!--class="box"와 class="child" 동시에 사용할 때 class="box child" 이렇게 -->
+        </div>
+        <div class="box"></div>
+        <div class="box">
+            <input type="password" required="required"> <!--required :  필수 입력창-->
+            <input type="submit"> <!--input도 div처럼 안에 class를 쓸 수 있음-->
+    </div>
+</body>
+</html>
