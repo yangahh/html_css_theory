@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: rebeccapurple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            animation: 5s scaleAndRotateSquare infinite ease-in-out 
+            /*애니메이션이 1.5초 걸리고, 이름을 적고, 효과는 ease-in-out, 무한반복(안 적어주면 1번하고 끝남)*/
+        }
+        @keyframes scaleAndRotateSquare {     /*애니메이션 생성과 이름*/
+            /* from{
+                transform: none;
+            }
+            to{
+                transform: rotate(1turn) scale(.5, .5);
+            } */
+            0%{
+                transform: none;   /* 0%-50% : 커지면서 회전*/
+            }
+            50%{
+                transform: rotate(1turn) scale(.5, .5); /* 50%-100% : 원래 모습으로 돌아감. 즉, 작아지면서 반대로 회전 */
+                color: white; /*폰트 색상 변경*/           
+            }
+            100%{
+                transform: none;  
+                color: red;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Animation</div>
+</body>
+</html>
